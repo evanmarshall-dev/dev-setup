@@ -133,19 +133,19 @@ Anytime you make a change to the zsh config file (.zshrc, which should be in the
 
 Updates to ZSH and plugins, type: `omz update`.
 
-My config file example for Oh My ZSH (omz) can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/examples/zsh/.zshrc). Configuration, theme, aliases, plugins, and more setup for Oh My ZSH.
+My config file example for Oh My ZSH (omz) can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/example_configs-settings/zsh/.zshrc). Configuration, theme, aliases, plugins, and more setup for Oh My ZSH.
 
 ##### Vscode Settings
 
-My settings file example for vscode can be found [HERE](<[https://update-with-link-to-project-guide](https://github.com/evanmarshall-dev/dev-setup/blob/main/examples/vscode/settings.json)>). Controls all settings for vscode such as fonts, custom extension settings, layout, etc.
+My settings file example for vscode can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/example_configs-settings/vscode/settings.json). Controls all settings for vscode such as fonts, custom extension settings, layout, etc.
 
 ##### Git Config
 
-My git config example can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/examples/git/.gitconfig). Links you local development environment to your Github account info.
+My git config example can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/example_configs-settings/git/.gitconfig). Links you local development environment to your Github account info.
 
 ##### Git Ignore
 
-My git ignore example can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/examples/git/.gitignore_global). When committing files to Github there are sometimes large libraries or files, which are not needed. Gitignore prevents these files/changes from being pushed to your remote Github repository.
+My git ignore example can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/example_configs-settings/git/.gitignore_global). When committing files to Github there are sometimes large libraries or files, which are not needed. Gitignore prevents these files/changes from being pushed to your remote Github repository.
 
 #### Recommended add-ons/plug-ins
 
