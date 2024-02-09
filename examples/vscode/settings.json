@@ -1,0 +1,150 @@
+{
+  // EDITOR
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 18,
+  "editor.renderWhitespace": "none",
+  "editor.fontFamily": "JetbrainsMono Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "editor.scrollBeyondLastLine": false,
+  "editor.scrollBeyondLastColumn": 2,
+  "editor.accessibilitySupport": "off",
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.linkedEditing": true,
+  "editor.tabSize": 2,
+  "editor.guides.bracketPairs": true,
+  // LINTING & FORMATTING
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  // WORKBENCH
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.statusBar.visible": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.restoreViewState": true,
+  // SIDEBAR & ACTIVITY BAR TOGGLE
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.makeRoom",
+      "sequence": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.toggleActivityBarVisibility"
+      ]
+    }
+  ],
+  // TERMINAL
+  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    },
+    "sh": {
+      "path": "/bin/sh"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  // FILES
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.git": false,
+    "**/.next": false,
+    "**/dist": false,
+    "**/node_modules": false
+  },
+  // GITIGNORE CONFIG
+  "search.useIgnoreFiles": true,
+  "search.useGlobalIgnoreFiles": true,
+  // FILE EXPLORER
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  // EMMET
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "html": "html"
+  },
+  // LIVE SERVER
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  // MARKDOWN
+  "markdown.occurrencesHighlight.enabled": true,
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.preview.autoShowPreviewToSide": true,
+  "markdown.extension.print.imgToBase64": true,
+  "markdown.extension.print.theme": "dark",
+  "markdown.extension.toc.orderedList": true,
+  // DISABLE HINTS & REFERENCE
+  "css.hover.references": false,
+  "less.hover.references": false,
+  "scss.hover.references": false,
+  "html.hover.references": false,
+  "css.hover.documentation": false,
+  "less.hover.documentation": false,
+  "scss.hover.documentation": false,
+  "html.hover.documentation": false,
+  "npm.scriptHover": false,
+  // AI - COPILOT & CODY
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "cody.autocomplete.advanced.provider": "experimental-ollama",
+  "cody.autocomplete.formatOnAccept": true,
+  // SPELL CHECKER IGNORED WORDS
+  "cSpell.userWords": [
+    "BEDMAS",
+    "COLOUR",
+    "commitlint",
+    "dgit",
+    "donot",
+    "esbenp",
+    "evanmarshall",
+    "Fira",
+    "fireship",
+    "flexboxes",
+    "Jetbrains",
+    "ollama",
+    "openai",
+    "Parens",
+    "pwsh",
+    "scminput",
+    "thebay",
+    "WEBVTT",
+    "Zellers"
+  ],
+  // EXTENSION
+  "color-highlight.markerType": "dot-before",
+  // MISCELLANEOUS
+  "security.workspace.trust.untrustedFiles": "open",
+  "css.lint.unknownAtRules": "ignore",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "breadcrumbs.enabled": false
+}
