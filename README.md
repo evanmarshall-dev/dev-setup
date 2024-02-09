@@ -8,19 +8,18 @@
 
 - Setup [Github](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) account.
 
-- Install Homebrew
+- Install [Homebrew](https://brew.sh/)
 
   - Open up your terminal and make sure you are in the user directory (i.e. mine is Macintosh HD/Users/evanmarshall)
   - Type the below code and press ENTER/RETURN:
 
   ```node
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
   ```
 
   - It is a good habit to update Homebrew after any change. You can do this by running the following command: `brew update`.
 
-- Install vscode
+- Install [vscode](https://formulae.brew.sh/cask/visual-studio-code)
 
   - Make sure you are in the same directory and type the below code followed by ENTER/RETURN:
 
@@ -39,7 +38,7 @@
 
   - See extras below.
 
-- Install ZSH (optional)
+- Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh) (omz)
 
   - Type the following code in terminal:
 
@@ -63,7 +62,7 @@
 
 - Git Setup
 
-  - Setup your Github username and email:
+  - Setup your Github username and email within local development environment:
 
   ```node
   git config --global user.name <replace with your username here>
