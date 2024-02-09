@@ -1,6 +1,6 @@
 # Evan's Front End Web Development Setup
 
-![The classic Hudson's Bay Compoany logo and crest](https://canadaalive.files.wordpress.com/2014/06/hbc-hubsons-bay-company-logo-11.jpg)
+![The classic Hudson's Bay Company logo and crest](https://canadaalive.files.wordpress.com/2014/06/hbc-hubsons-bay-company-logo-11.jpg)
 
 ## MacOS (February 2024)
 
@@ -59,6 +59,8 @@
   brew install --cask font-hack-nerd-font
   ```
 
+- Follow along with my vscode settings.json after installing the fonts and ZSH. We will add on to these settings as we continue on with the following setup. The example settings.json is referenced [HERE](#vscode-settings)
+
 - Git Setup
 
   - Setup your Github username and email:
@@ -68,14 +70,15 @@
   git config --global user.email <replace with you@your-domain.com>
   ```
 
-  - The first time you run the above commands will create a.gitconfig file in your root directory. The example gitconfig file can be found [HERE](https://update-with-link-to-project-guide). Instead of writing more commands in the terminal we will follow along using that example to create the rest of the config.
+  - The first time you run the above commands will create a.gitconfig file in your root directory. The example gitconfig file are referenced [HERE](#git-config). Instead of writing more commands in the terminal we will follow along using that example to create the rest of the config.
+
   - Create a file in your root directory called `.gitignore_global` (let's practice a common terminal command to create this file: `touch .gitignore_global`) and run the following command:
 
   ```node
   git config --global core.excludesfile ~/.gitignore_global
   ```
 
-  - We will use and modify my example gitignore file to suit your needs. The example can be found [HERE](https://update-with-link-to-project-guide)
+  - We will use and modify my example gitignore file to suit your needs. The example is referenced [HERE](#git-ignore)
 
 - Node & NVM Setup
 
@@ -131,13 +134,19 @@ Anytime you make a change to the zsh config file (.zshrc, which should be in the
 
 Updates to ZSH and plugins, type: `omz update`.
 
-My config file example for Oh My ZSH (omz) can be found [HERE](https://update-with-link-to-project-guide). Configuration, theme, aliases, plugins, and more setup for Oh My ZSH.
+My config file example for Oh My ZSH (omz) can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/examples/zsh/.zshrc). Configuration, theme, aliases, plugins, and more setup for Oh My ZSH.
 
-My settings file example for vscode can be found [HERE](https://update-with-link-to-project-guide). Controls all settings for vscode such as fonts, custom extension settings, layout, etc.
+##### Vscode Settings
 
-My git config example can be found [HERE](https://update-with-link-to-project-guide). Links you local development environment to your Github account info.
+My settings file example for vscode can be found [HERE](<[https://update-with-link-to-project-guide](https://github.com/evanmarshall-dev/dev-setup/blob/main/examples/vscode/settings.json)>). Controls all settings for vscode such as fonts, custom extension settings, layout, etc.
 
-My git ignore example can be found [HERE](https://update-with-link-to-project-guide). When committing files to Github there are sometimes large libraries or files, which are not needed. Gitignore prevents these files/changes from being pushed to your remote Github repository.
+##### Git Config
+
+My git config example can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/examples/git/.gitconfig). Links you local development environment to your Github account info.
+
+##### Git Ignore
+
+My git ignore example can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/examples/git/.gitignore_global). When committing files to Github there are sometimes large libraries or files, which are not needed. Gitignore prevents these files/changes from being pushed to your remote Github repository.
 
 #### Recommended add-ons/plug-ins
 
@@ -147,4 +156,4 @@ My git ignore example can be found [HERE](https://update-with-link-to-project-gu
 
 | 3 | [Securing Your Connection to Github Using SSH](https://www.darraghoriordan.com/2021/05/04/configure-multiple-github-accounts-one-computer) | You can setup multiple instances of Github connections in your local environment (i.e. One for work and one for school) and you should also generate SSH keys to secure your connection to your Github remote repositories as well. This could warrant a whole new tutorial as it is a sizeable topic.
 
-| 4 | [More Advanced Development Setups using Gulp](https://www.linktoexamplegulpcodebase.com) | Again, this could warrant another tutorial, but basically gulp helps you automate tedious development tasks and speeds up your development workflow/efficiency. It can aid with tasks such as processing SASS code into CSS, minifying code, compressing/optimizing images, preparing code for production, etc.
+| 4 | [More Advanced Development Setups using Gulp](#) | Again, this could warrant another tutorial, but basically gulp helps you automate tedious development tasks and speeds up your development workflow/efficiency. It can aid with tasks such as processing SASS code into CSS, minifying code, compressing/optimizing images, preparing code for production, etc.
