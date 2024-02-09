@@ -13,7 +13,7 @@
   - Open up your terminal and make sure you are in the user directory (i.e. mine is Macintosh HD/Users/evanmarshall)
   - Type the below code and press ENTER/RETURN:
 
-  ```node
+  ```javascript
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
 
@@ -23,7 +23,7 @@
 
   - Make sure you are in the same directory and type the below code followed by ENTER/RETURN:
 
-  ```node
+  ```javascript
   brew install --cask visual-studio-code
   ```
 
@@ -31,7 +31,7 @@
 
   - In user directory, type the following code followed by ENTER/RETURN:
 
-  ```node
+  ```javascript
   brew install git
   brew install nvm
   ```
@@ -42,7 +42,7 @@
 
   - Type the following code in terminal:
 
-  ```node
+  ```javascript
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   ```
@@ -51,7 +51,7 @@
 
   - In your user directory type:
 
-  ```node
+  ```javascript
   brew tap homebrew/cask-fonts
   brew install --cask font-hack-nerd-font
   ```
@@ -64,7 +64,7 @@
 
   - Setup your Github username and email within local development environment:
 
-  ```node
+  ```javascript
   git config --global user.name <replace with your username here>
   git config --global user.email <replace with you@your-domain.com>
   ```
@@ -73,7 +73,7 @@
 
   - Create a file in your root directory called `.gitignore_global` (let's practice a common terminal command to create this file: `touch .gitignore_global`) and run the following command:
 
-  ```node
+  ```javascript
   git config --global core.excludesfile ~/.gitignore_global
   ```
 
@@ -84,26 +84,26 @@
   - You already installed NVM via Homebrew in a previous step, but it still requires some configuration and install of Node Package Manager (npm).
   - You can do this with the following commands in terminal:
 
-  ```node
+  ```javascript
   echo "source $(brew --prefix nvm)/nvm.sh" >> ~/.zshrc
   source ~/.zshrc
   ```
 
   - Now to install the latest version of node using Node Package Manager (nvm):
 
-  ```node
+  ```javascript
   nvm install --lts
 
-  # Check versions to confirm install.
+  // Check versions to confirm install.
   node -v && npm -v
 
-  # Make sure npm is using the latest version, globally.
+  // Make sure npm is using the latest version, globally.
   npm install -g npm@latest
   ```
 
   - For managing node packages I prefer YARN as it is newer, easier to use, and more secure. To install yarn type the following command in the terminal:
 
-  ```node
+  ```javascript
   npm install -g yarn
   yarn -v
   ```
@@ -117,7 +117,7 @@
   - You can use ChatGPT (openAI), or I have been testing with Ollama (Facebook's AI). If using Ollama, you need to download the app, found [HERE](https://ollama.ai/). You will probably need HBC Temp Admin access in order to complete the Ollama install.
   - You will want to type the following in the terminal at the root directory:
 
-  ```node
+  ```javascript
   ollama pull codellama:7b-code
   ```
 
