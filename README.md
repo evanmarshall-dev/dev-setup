@@ -6,9 +6,7 @@
 
 ### Preparing the Computer
 
-- Setup Github account.
-
-- Activate Settings Sync in vscode and link to your Github account.
+- Setup [Github](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) account.
 
 - Install Homebrew
 
@@ -60,6 +58,8 @@
   ```
 
 - Follow along with my vscode settings.json after installing the fonts and ZSH. We will add on to these settings as we continue on with the following setup. The example settings.json is referenced [HERE](#vscode-settings)
+
+- Activate [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) in vscode and link to your Github account.
 
 - Git Setup
 
