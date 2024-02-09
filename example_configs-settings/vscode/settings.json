@@ -16,6 +16,7 @@
   "editor.linkedEditing": true,
   "editor.tabSize": 2,
   "editor.guides.bracketPairs": true,
+  "editor.stickyScroll.enabled": true,
   // LINTING & FORMATTING
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
@@ -30,6 +31,7 @@
   "workbench.statusBar.visible": true,
   "workbench.editor.enablePreview": false,
   "workbench.editor.restoreViewState": true,
+  "workbench.tree.enableStickyScroll": true,
   // SIDEBAR & ACTIVITY BAR TOGGLE
   "multiCommand.commands": [
     {
@@ -120,15 +122,18 @@
   // SPELL CHECKER IGNORED WORDS
   "cSpell.userWords": [
     "BEDMAS",
+    "codellama",
     "COLOUR",
     "commitlint",
     "dgit",
     "donot",
     "esbenp",
     "evanmarshall",
+    "excludesfile",
     "Fira",
     "fireship",
     "flexboxes",
+    "HBC'ers",
     "Jetbrains",
     "ollama",
     "openai",
