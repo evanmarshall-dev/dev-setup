@@ -65,8 +65,8 @@
   - Setup your Github username and email within local development environment:
 
   ```javascript
-  git config --global user.name <replace with your username here>
-  git config --global user.email <replace with you@your-domain.com>
+  git config --global user.name // add your email after user.name
+  git config --global user.email // add your email after user.email
   ```
 
   - The first time you run the above commands will create a.gitconfig file in your root directory. The example gitconfig file are referenced [HERE](#git-config). Instead of writing more commands in the terminal we will follow along using that example to create the rest of the config.
