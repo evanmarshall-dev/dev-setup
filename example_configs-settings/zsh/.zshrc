@@ -102,139 +102,81 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# SYSTEM ALIASES
-# ----------------------------------------------
-# get machine's ip address
-alias ip="ipconfig getifaddr en0"
-
-# DEV SETUP: OPENCOMMIT, COMMITLINT, HUSKY ALIASES, LINT-STAGED, ESLINT, AND PRETTIER
-# ----------------------------------------------
-alias ocsetup="yarn global add opencommit@latest && oco config set OCO_EMOJI=true && oco config set OCO_MODEL=gpt-3.5-turbo && oco config set OCO_LANGUAGE=en && oco config set OCO_PROMPT_MODULE=@commitlint" # Set prompt module, to be done globally.
-alias ockey="OCO_OPENAI_API_KEY=" # Set OpenAI API key, to be done globally. Make sure to add key after this alias.
-alias occl="yarn add -D @commitlint/{config-conventional,cli}" # Install within local project.
-alias lintconf="yarn init @eslint/config" # Install within local project and answer basic project setup questions.
-alias packs="yarn add -D husky lint-staged prettier eslint-config-prettier" # Install within local project.
-alias conf="touch .prettierrc.yml && touch .eslintignore && touch .prettierignore" # Create config files within local project.
-alias husky="npx husky-init && yarn install" # Initialize/Install husky within local project.
-alias huskypre="yarn husky add .husky/pre-commit 'yarn lint-staged'" # Add pre-commit hook to husky within local project.
-alias yei="yarn eslint --init" # Initialize eslint within local project.
-alias hook="oco hook set" # Set hook within local project.
+# ALL ALIASES
 
 # CLI ALIASES
 # ----------------------------------------------
-alias out="cd .."
-alias in="cd"
-alias md="mkdir"
-alias mfi="touch"
-alias m="mv"
-alias c="cp"
-alias d="rm"
-alias df="rm -r"
-alias l="ls"
-alias la="ls -a"
-alias p="pwd"
-alias cl="clear"
-## man gives help guide to corresponding command
-alias ma="man"
-
-# NODE ALIASES
-# ----------------------------------------------
-## Specific to web dev bootcamp folder/file creation script.
-alias nf="node create-dir.js" ## Followed by the folder name.
+alias up="echo 'Going up a directory, boiiii!' && cd .." # Up one directory.
+alias in="echo 'Getting all up in that directory!' && cd" # Out to root directory or if you follow this command with a directory name or path it moves into said directory.
+alias md="echo 'You make that folder!' && mkdir" # Create a directory.
+alias dd="echo 'Nobody wants that folder!' && rm -r" # Remove a directory recursively (Removes all sub-directories and files).
+alias mf="echo 'Populating your computer with little baby files!' && touch" # Create a file.
+alias df="echo 'The milk was a bad choice, remove that file!' && rm" # Remove a file.
+alias m="echo 'Just keep moving, just keep moving!' && mv" # Move a file.
+alias c="echo 'Copying that file?? How about you be original!' && cp" # Copy a file.
+alias l="echo 'Ooooo, what is in here?!' && ls" # List contents of current directory.
+alias la="echo 'Ooooo, piece a candy!' && ls -a" # Lists all contents including hidden files and admin permissions.
+alias p="echo 'Where are we again?' && pwd" # Displays your current directory.
+alias cl="echo 'Time to clean up, it is messy in here!!' && clear" # Clears terminal/command window.
 
 # HOMEBREW ALIASES
 # ----------------------------------------------
-alias bup="brew update && brew upgrade && brew cleanup && brew doctor"
-alias blist="brew list"
+alias -g bup="echo 'Your brew is looking a bit sour, better refresh that!' && brew update && brew upgrade && brew cleanup && brew doctor" # Updates/upgrades Homebrew packages, removes outdated files, and check system for problems.
+alias bl="echo 'Let us see what brews you have in your collection.' && brew list" # Lists all Homebrew packages.
 
 # WSL/UBUNTU ALIASES
 # ----------------------------------------------
-alias distup="sudo apt-get update && sudo apt-get upgrade -y"
+alias -g uup="echo 'Your linux packages are looking a bit dated...' && sudo apt-get update && sudo apt-get upgrade -y" # Updates/upgrade linux packages and prompt "yes" anytime command asks for it.
 
 # ZSH/OH-MY-ZSH ALIASES
 # ----------------------------------------------
-# Install oh-my-zsh
-alias omzinstall="sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
-# Install oh-my-zsh
-alias ozin="sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
-# Update oh-my-zsh instances
-alias ozup="omz update"
-# edit global zsh configuration
-alias zconf="code ~/.zshrc"
-# reload zsh configuration
-alias zsrc="source ~/.zshrc"
-# reload zsh configuration
-alias oz="cd ~/.oh-my-zsh"
+alias zin="echo 'Get ready for some linuxy goodness!!' && sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'" # Installs Oh My ZSH.
+alias zed="echo 'Editing your ZSH config, eh?' && code ~/.zshrc" # Edit global ZSH config.
+alias zre="echo 'It is annoying, but we have to refresh the config EVERYTIME we make a change...' && source ~/.zshrc" # Reloads ZSH config after changes.
 
 # SSH ALIASES
 # ----------------------------------------------
-# navigate to global ssh directory
-alias sshhome="cd ~/.ssh"
-# edit global ssh configuration
-alias sshconfig="code ~/.ssh/config"
-## Follow key gen alias with your email address then you will be prompted for a filename i.e. personalaccount-github
-alias skgen="ssh-keygen -t ed25519 -C"
-## Start SSH agent
-alias sagent="eval '$(ssh-agent -s)'"
-## Add key to agent. Make sure you add filename created above to the end of this alias
-alias sakey="ssh-add -K ~/.ssh/"
-## Test your connection. Make sure you add your Host name created during the config file setup, to the end of this alias
-alias stest="ssh -T git@"
-## All info for ssh setup can be found at: https://www.darraghoriordan.com/2021/05/04/configure-multiple-github-accounts-one-computer/
+alias shao="echo 'Making sure you are in the correct directory before creating some SSH stuff!' && cd ~/.ssh" # Navigate to global ssh directory.
+alias shacon="echo 'Open that config... SHHHHH!' && code ~/.ssh/config" # Edit global ssh configuration using vscode.
+alias shagen="echo 'The key to your heart :)' && ssh-keygen -t ed25519 -C" # Creates a local SSH key if followed by filename (i.e. personal-github).
+alias shagent="echo 'I do not know what this is, but we gotta do it or else the next step will not work...' && eval '$(ssh-agent -s)'" # Starts SSH agent.
+alias shakey="echo 'The name is Bond, James Bond... and I need that key!' && ssh-add -K ~/.ssh/" # Adds SSH key to agent. Make sure you add filename created with skgen alias to the end of this alias.
+alias shatest="echo 'Did it work??' && ssh -T git@" # Test your connection. Make sure you add your Host name created during the config file setup, to the end of this alias.
 
 # GULP ALIASES
 # ----------------------------------------------
-## Gulp Development Tasks
-alias g="gulp"
-alias gfr="gulp devFr"
-alias gt="gulp --template" # Followed by template name, if none provided, default.html template will be used.
-alias gtfr="gulp devFr --template"
-## Gulp Build/Compile Tasks
-alias gb="gulp build"
-alias gbfr="gulp buildFr"
-## Individual gulp tasks
-alias gcl="gulp clean"
-alias gw="gulp watchDev"
+alias gu="echo 'GULP!' && gulp" # Runs gulp command.
+alias gufr="echo 'LES GULP!?' && gulp devFr" # Runs French gulp command.
+alias gut="echo 'Let us check out that work!' && gulp --template" # Runs development task on HTML template if followed by template name. If none provided, default.html template will be used.
+alias gutfr="echo 'Tu es... Grand poulette!' && gulp devFr --template" # Runs French development task on HTML template if followed by template name. If none provided, default.html template will be used.
+alias gub="echo 'Well you are just a cute little Bob the builder!' && gulp build" # Runs build tasks.
+alias gubfr="echo 'Es que je puis aller aux toilettes!' && gulp buildFr" # Runs the French build tasks.
+alias gucl="echo 'Clean up, clean up, everybody clean up!' && gulp clean" # Runs the clean or delete task for dev and prod directories.
 
 # GIT ALIASES
 # ----------------------------------------------
-# edit global git configuration
-alias gconf="code ~/.gitconfig"
-alias gcm="git add . && git commit -m" # Followed by message in quotes
-alias gs="git status"
-alias gpom="git push origin main"
-## Create new branch
-alias gcb="git checkout -b"
-## Switch to branch specified after checkout
-alias gsb="git checkout"
-alias gc="git clone"
-## Set upstream to push branch followed by name of branch
-alias gus="git push --set-upstream origin"
-alias gpu="git pull"
-alias gp="git push"
-alias gcache="git config --global credential.helper cache --timeout=3600"
-## Run following when adding local repo to remote
-### First, cd into local repo and add a README file.
-#### echo "# name-of-repo" >> README.md
-### Replace name-of-repo with the name of your repository
-### Add git initialization to project
-alias gin="git init"
-### Stage README, created above.
-alias gar="git add README.md"
+alias gcon="echo 'Opening your global Git Config file.' && code ~/.gitconfig" # Opens global gitconfig file in vscode.
+alias gig="echo 'Opening up your global Git Ignore file.' && code ~/.gitignore_global" # Opens global gitconfig file in vscode.
+alias gcm="echo 'A little shortcut to speed up your commit process.' && git add . && git commit -m" # Adds all changed files to staging and generates a commit with message. Append the git commit message to the end of this alias within quotes.
+alias gs="echo 'All right! What is going on here?' && git status" # Provides git status.
+alias gcb="echo 'A new branch is sprouting on your Git tree :)' && git checkout -b" # Switch to and create branch. Append branch name to the end of this alias.
+alias gsb="echo 'Let us climb to that branch!' && git checkout" # Switched to branch specified after this alias.
+alias gc="echo 'Let us The Sixth Day this shhhh!' && git clone" # Clones a remote repo. Append repo URL or SSH to this alias.
+alias gpu="echo 'What are they doing up there? Pull it down!' && git pull" # Pulls changes from remote branch to local.
+alias gp="echo 'Alright, we done. Push it up!' && git push" # Pushes local changes to origin.
+
+# SETUP LOCAL CODEBASE TO REMOTE REPO
+# ----------------------------------------------
+alias gin="git init" # Adds git initialized directory to local codebase.
 ### Commit changes
 alias gcf="git commit -m 'first commit'"
 ### Make sure on main branch
 alias gbm="git branch -M main"
-### Add remote origin to local repo
-### Make sure you add the remote URL after command using SSH config in place of git@github.com: to git@dgit:
 alias grao="git remote add origin"
 ### Push local changes to remote main branch
 alias gpom="git push -u origin main"
+
+alias test="echo 'does this work?'"
 
 # NEXTJS ALIASES
 # ----------------------------------------------
@@ -293,8 +235,9 @@ alias nd="nodemon"
 
 # HUSKY ALIASES
 # ----------------------------------------------
-# Install Husky
-alias hi="npx husky-init && yarn"
+alias hi="npm install --save-dev husky"
+alias hin="npx husky init"
+alias hp="npm run prepare"
 
 # Remove system and username from terminal and change prompt
 prompt_context() {
