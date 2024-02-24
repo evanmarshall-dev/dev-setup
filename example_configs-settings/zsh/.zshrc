@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ALIAS FUNCTIONS
+# MACOSX ALIASES
 # ----------------------------------------------
 hiddenOn() {
   echo "Show hidden folder on your Mac. 👓"
@@ -129,8 +129,6 @@ alias la="echo -e 'Ooooo, piece a candy! 🍬\n\n' && ls -a" # Lists all content
 alias p="echo -e 'Where are we again? 😳\n\n' && pwd" # Displays your current directory.
 alias cl="echo -e 'Time to clean up, it is messy in here!! 🧹\n\n' && clear" # Clears terminal/command window.
 
-# CREATE NEW DIRECTORY & CD INTO IT
-# ----------------------------------------------
 mkcd() {
   if [ ! -n "$1" ]; then
     echo "Enter a directory name 😠"
@@ -139,7 +137,7 @@ mkcd() {
   else
     mkdir $1 && cd $1
   fi
-}
+} # Create a directory and cd into it.
 
 # HOMEBREW ALIASES
 # ----------------------------------------------
@@ -198,16 +196,6 @@ alias grao="git remote add origin"
 ### Push local changes to remote main branch
 alias gpom="git push -u origin main"
 
-# mkcd() {
-#   if [ ! -n "$1" ]; then
-#     echo "Enter a directory name"
-#   elif [ -d $1 ]; then
-#     echo "\`$1' already exists"
-#   else
-#     mkdir $1 && cd $1
-#   fi
-# }
-
 # NEXTJS ALIASES
 # ----------------------------------------------
 ## Add name of project after nxtcna or nxtcnat
@@ -259,15 +247,20 @@ alias nc="npm cache clean"
 alias na="npm audit"
 alias naf="npm audit fix"
 
-# NODEMON ALIASES
-# ----------------------------------------------
-alias ndm="nodemon"
-
 # HUSKY ALIASES
 # ----------------------------------------------
 alias hi="npm install --save-dev husky"
 alias hin="npx husky init"
 alias hp="npm run prepare"
+
+huskySet() {
+  echo "Install Husky as a dev dependancy."
+  npm install --save-dev husky
+  echo "Initialize Husky."
+  npx husky init
+  echo "Create pre-commit file."
+  npm run prepare
+}
 
 # ADD VSCODE AS DEFAULT EDITOR
 # ----------------------------------------------
