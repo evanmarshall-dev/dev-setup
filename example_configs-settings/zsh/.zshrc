@@ -94,6 +94,12 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# ALIAS FUNCTIONS
+# ----------------------------------------------
+function hiddenOn() { defaults write com.apple.Finder AppleShowAllFiles true || killall Finder ; } # Show hidden folders in MacOSX.
+
+function hiddenOff() { defaults write com.apple.Finder AppleShowAllFiles false || killall Finder ; } # Hide hidden folders in MacOSX.
+
 # CLI ALIASES
 # ----------------------------------------------
 alias up="echo -e 'Going up a directory, boiiii! 🛸\n\n' && cd .." # Up one directory.
