@@ -96,9 +96,23 @@ source $ZSH/oh-my-zsh.sh
 
 # ALIAS FUNCTIONS
 # ----------------------------------------------
-function hiddenOn() { defaults write com.apple.Finder AppleShowAllFiles true || killall Finder ; } # Show hidden folders in MacOSX.
+hiddenOn() {
+  echo "Show hidden folder on your Mac. 👓"
+  defaults write com.apple.Finder AppleShowAllFiles true
+  echo "****************************************"
+  echo "Refresh finder window. 🪟"
+  killall Finder ;
+  echo "DONE! 😃"
+} # Show hidden folders in MacOSX.
 
-function hiddenOff() { defaults write com.apple.Finder AppleShowAllFiles false || killall Finder ; } # Hide hidden folders in MacOSX.
+hiddenOff() {
+  echo "Hide hidden folder on your Mac. 👓"
+  defaults write com.apple.Finder AppleShowAllFiles true
+  echo "****************************************"
+  echo "Refresh finder window. 🪟"
+  killall Finder ;
+  echo "DONE! 😃"
+} # Hide hidden folders in MacOSX.
 
 # CLI ALIASES
 # ----------------------------------------------
@@ -114,6 +128,18 @@ alias l="echo -e 'Ooooo, what is in here?! 🧐\n\n' && ls" # List contents of c
 alias la="echo -e 'Ooooo, piece a candy! 🍬\n\n' && ls -a" # Lists all contents including hidden files and admin permissions.
 alias p="echo -e 'Where are we again? 😳\n\n' && pwd" # Displays your current directory.
 alias cl="echo -e 'Time to clean up, it is messy in here!! 🧹\n\n' && clear" # Clears terminal/command window.
+
+# CREATE NEW DIRECTORY & CD INTO IT
+# ----------------------------------------------
+mkcd() {
+  if [ ! -n "$1" ]; then
+    echo "Enter a directory name 😠"
+  elif [ -d $1 ]; then
+    echo "\`$1' already exists 🫣"
+  else
+    mkdir $1 && cd $1
+  fi
+}
 
 # HOMEBREW ALIASES
 # ----------------------------------------------
@@ -171,6 +197,16 @@ alias gbm="git branch -M main"
 alias grao="git remote add origin"
 ### Push local changes to remote main branch
 alias gpom="git push -u origin main"
+
+# mkcd() {
+#   if [ ! -n "$1" ]; then
+#     echo "Enter a directory name"
+#   elif [ -d $1 ]; then
+#     echo "\`$1' already exists"
+#   else
+#     mkdir $1 && cd $1
+#   fi
+# }
 
 # NEXTJS ALIASES
 # ----------------------------------------------
