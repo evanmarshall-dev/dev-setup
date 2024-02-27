@@ -97,10 +97,11 @@ source $ZSH/oh-my-zsh.sh
 # MACOSX ALIASES
 # ----------------------------------------------
 hiddenOn() {
-  echo "Show hidden folder on your Mac. 👓"
+  echo "Show hidden folder on your Mac. 👓👓"
   defaults write com.apple.Finder AppleShowAllFiles true
-  echo "****************************************"
+  echo "***************************************************"
   echo "Refresh finder window. 🪟"
+  echo "***************************************************"
   killall Finder ;
   echo "DONE! 😃"
 } # Show hidden folders in MacOSX.
@@ -108,8 +109,9 @@ hiddenOn() {
 hiddenOff() {
   echo "Hide hidden folder on your Mac. 👓"
   defaults write com.apple.Finder AppleShowAllFiles true
-  echo "****************************************"
+  echo "***************************************************"
   echo "Refresh finder window. 🪟"
+  echo "***************************************************"
   killall Finder ;
   echo "DONE! 😃"
 } # Hide hidden folders in MacOSX.
@@ -130,10 +132,15 @@ alias p="echo -e 'Where are we again? 😳\n\n' && pwd" # Displays your current 
 alias cl="echo -e 'Time to clean up, it is messy in here!! 🧹\n\n' && clear" # Clears terminal/command window.
 
 mkcd() {
+  echo "Let us create a folder then enter it!"
   if [ ! -n "$1" ]; then
-    echo "Enter a directory name 😠"
+    echo "*************************************************"
+    echo "Enter a directory name, silly! 😠😠"
+    echo "*************************************************"
   elif [ -d $1 ]; then
-    echo "\`$1' already exists 🫣"
+    echo "*************************************************"
+    echo "\`$1' already exists, oh my! 🫣🫣"
+    echo "*************************************************"
   else
     mkdir $1 && cd $1
   fi
@@ -141,7 +148,22 @@ mkcd() {
 
 # HOMEBREW ALIASES
 # ----------------------------------------------
-alias -g bup="echo -e 'Your brew is looking a bit sour, better refresh that! 🍻\n\n' && brew update && brew upgrade && brew cleanup && brew doctor" # Updates/upgrades Homebrew packages, removes outdated files, and check system for problems.
+brewUp() {
+  echo "Your brew is looking a bit sour, better refresh that! 🍻🍻"
+  echo "***************************************************"
+  echo "Updating taps. 🔧🛁"
+  echo "***************************************************"
+  brew update
+  echo "***************************************************"
+  echo "Upgrading formulae. 📝📝"
+  echo "***************************************************"
+  brew upgrade
+  echo "***************************************************"
+  echo "Fixing any errors and clearing outdated files. 🏥🌡️"
+  echo "***************************************************"
+  brew doctor
+} # Updates/upgrades Homebrew packages, removes outdated files, and check system for problems.
+
 alias bl="echo -e 'Let us see what brews you have in your collection. 📚\n\n' && brew list" # Lists all Homebrew packages.
 
 # WSL/UBUNTU ALIASES
@@ -150,7 +172,22 @@ alias -g uup="echo -e 'Your linux packages are looking a bit dated... 👴\n\n' 
 
 # ZSH/OH-MY-ZSH ALIASES
 # ----------------------------------------------
-alias zin="echo -e 'Get ready for some linuxy goodness!! 🤯\n\n' && sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'" # Installs Oh My ZSH.
+zshSet() {
+  echo "Get ready for some linuxy goodness!! 🍕🍕"
+  echo "***************************************************"
+  echo "First, let us check to see if ZSH is installed. 🤔👓"
+  echo "***************************************************"
+  zsh --version
+  echo "***************************************************"
+  echo "Set ZSH as the default shell! 😀😀"
+  echo "***************************************************"
+  chsh -s $(which zsh)
+  echo "***************************************************"
+  echo "Install Oh My ZSH!! 🤩🤩"
+  echo "***************************************************"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+}
+
 alias zed="echo -e 'Editing your ZSH config, eh? 👨‍🔬\n\n' && code ~/.zshrc" # Edit global ZSH config.
 alias zre="echo -e 'It is annoying, but we have to refresh the config EVERYTIME we make a change... 🙃\n\n' && source ~/.zshrc" # Reloads ZSH config after changes.
 
@@ -177,7 +214,32 @@ alias gucl="echo -e 'Clean up, clean up, everybody clean up! 🎵\n\n' && gulp c
 # ----------------------------------------------
 alias gcon="echo -e 'Opening your global Git Config file. 🎛️\n\n' && code ~/.gitconfig" # Opens global gitconfig file in vscode.
 alias gig="echo -e 'Opening up your global Git Ignore file. 🎛️\n\n' && code ~/.gitignore_global" # Opens global gitconfig file in vscode.
-alias gcm="echo -e 'A little shortcut to speed up your commit process. 🛣️\n\n' && git add . && git commit -m" # Adds all changed files to staging and generates a commit with message. Append the git commit message to the end of this alias within quotes.
+
+gitCm() {
+  echo "You have done some great work! Now let us send that up to the repo for safe keeping. ✅✅"
+  echo "***************************************************"
+  echo "First, let us check the status of the local work vs remote repo. 🌱🌱"
+  echo "***************************************************"
+  git status
+  echo "***************************************************"
+  echo "Then, let us add all of the changed files to staging. 🪜🪜"
+  echo "***************************************************"
+  git add .
+  echo "***************************************************"
+  echo "Now, checking to see if you created a commit message. ❓❓"
+  echo "***************************************************"
+  if [ ! -n "$1" ]; then
+    echo "*************************************************"
+    echo "Enter a commit message, silly! 😠😠"
+    echo "*************************************************"
+  else
+    echo "*************************************************"
+    echo "Great message! Committing now. 🗒️⬆️"
+    echo "*************************************************"
+    git commit -m "$1"
+  fi
+} # Adds all changed files to staging and generates a commit with message. Append the git commit message to the end of this function alias within quotes.
+
 alias gs="echo -e 'All right! What is going on here? 😕\n\n' && git status" # Provides git status.
 alias gcb="echo -e 'A new branch is sprouting on your Git tree 🌳\n\n' && git checkout -b" # Switch to and create branch. Append branch name to the end of this alias.
 alias gsb="echo -e 'Let us climb to that branch! 🌴\n\n' && git checkout" # Switched to branch specified after this alias.
@@ -249,10 +311,6 @@ alias naf="npm audit fix"
 
 # HUSKY ALIASES
 # ----------------------------------------------
-alias hi="npm install --save-dev husky"
-alias hin="npx husky init"
-alias hp="npm run prepare"
-
 huskySet() {
   echo "Install Husky as a dev dependancy."
   npm install --save-dev husky
