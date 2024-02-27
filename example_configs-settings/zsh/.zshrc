@@ -22,6 +22,10 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# Change highlight color for ZSH Auto Suggest plugin
+# ----------------------------------------------
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
+
 # SOURCE
 # ----------------------------------------------
 source $ZSH/oh-my-zsh.sh
