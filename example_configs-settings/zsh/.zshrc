@@ -149,6 +149,8 @@ mkcd() {
 
 # HOMEBREW ALIASES
 # ----------------------------------------------
+alias bl="echo -e 'Let us see what brews you have in your collection. 📚\n\n' && brew list" # Lists all Homebrew packages.
+
 brewUp() {
   echo "Your brew is looking a bit sour, better refresh that! 🍻🍻"
   echo "***************************************************"
@@ -165,14 +167,15 @@ brewUp() {
   brew doctor
 } # Updates/upgrades Homebrew packages, removes outdated files, and check system for problems.
 
-alias bl="echo -e 'Let us see what brews you have in your collection. 📚\n\n' && brew list" # Lists all Homebrew packages.
-
 # WSL/UBUNTU ALIASES
 # ----------------------------------------------
 alias -g uup="echo -e 'Your linux packages are looking a bit dated... 👴\n\n' && sudo apt-get update && sudo apt-get upgrade -y" # Updates/upgrade linux packages and prompt "yes" anytime command asks for it.
 
 # ZSH/OH-MY-ZSH ALIASES
 # ----------------------------------------------
+alias zed="echo -e 'Editing your ZSH config, eh? 👨‍🔬\n\n' && code ~/.zshrc" # Edit global ZSH config.
+alias zre="echo -e 'It is annoying, but we have to refresh the config EVERYTIME we make a change... 🙃\n\n' && source ~/.zshrc" # Reloads ZSH config after changes.
+
 zshSet() {
   echo "Get ready for some linuxy goodness!! 🍕🍕"
   echo "***************************************************"
@@ -188,9 +191,6 @@ zshSet() {
   echo "***************************************************"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
-
-alias zed="echo -e 'Editing your ZSH config, eh? 👨‍🔬\n\n' && code ~/.zshrc" # Edit global ZSH config.
-alias zre="echo -e 'It is annoying, but we have to refresh the config EVERYTIME we make a change... 🙃\n\n' && source ~/.zshrc" # Reloads ZSH config after changes.
 
 # SSH ALIASES
 # ----------------------------------------------
@@ -215,6 +215,12 @@ alias gucl="echo -e 'Clean up, clean up, everybody clean up! 🎵\n\n' && gulp c
 # ----------------------------------------------
 alias gcon="echo -e 'Opening your global Git Config file. 🎛️\n\n' && code ~/.gitconfig" # Opens global gitconfig file in vscode.
 alias gig="echo -e 'Opening up your global Git Ignore file. 🎛️\n\n' && code ~/.gitignore_global" # Opens global gitconfig file in vscode.
+alias gs="echo -e 'All right! What is going on here? 😕\n\n' && git status" # Provides git status.
+alias gcb="echo -e 'A new branch is sprouting on your Git tree 🌳\n\n' && git checkout -b" # Switch to and create branch. Append branch name to the end of this alias.
+alias gsb="echo -e 'Let us climb to that branch! 🌴\n\n' && git checkout" # Switched to branch specified after this alias.
+alias gc="echo -e 'Let us The Sixth Day this shhhh! 🕕\n\n' && git clone" # Clones a remote repo. Append repo URL or SSH to this alias.
+alias gpu="echo -e 'What are they doing up there? Pull it down! 😶‍🌫️\n\n' && git pull" # Pulls changes from remote branch to local.
+alias gp="echo -e 'Alright, we done. Push it up! 🫷⬆️\n\n' && git push" # Pushes local changes to origin.
 
 gitCom() {
   echo "You have done some great work! Now let us send that up to the repo for safe keeping. ✅✅"
@@ -244,13 +250,6 @@ gitCom() {
     git push
   fi
 } # Adds all changed files to staging and generates a commit with message. Append the git commit message to the end of this function alias within quotes. If all checks passed, it then pushes to remote repo.
-
-alias gs="echo -e 'All right! What is going on here? 😕\n\n' && git status" # Provides git status.
-alias gcb="echo -e 'A new branch is sprouting on your Git tree 🌳\n\n' && git checkout -b" # Switch to and create branch. Append branch name to the end of this alias.
-alias gsb="echo -e 'Let us climb to that branch! 🌴\n\n' && git checkout" # Switched to branch specified after this alias.
-alias gc="echo -e 'Let us The Sixth Day this shhhh! 🕕\n\n' && git clone" # Clones a remote repo. Append repo URL or SSH to this alias.
-alias gpu="echo -e 'What are they doing up there? Pull it down! 😶‍🌫️\n\n' && git pull" # Pulls changes from remote branch to local.
-alias gp="echo -e 'Alright, we done. Push it up! 🫷⬆️\n\n' && git push" # Pushes local changes to origin.
 
 gitNew() {
   echo "You just created a local project and a blank remote repo. Let us connect the two! 👊👊"
@@ -295,13 +294,7 @@ gitNew() {
 
 # NEXTJS ALIASES
 # ----------------------------------------------
-## Add name of project after nxtcna or nxtcnat
-alias nxtcna="yarn create next-app"
-alias nxtcnat="yarn create next-app --typescript"
-alias nxtdev="yarn dev"
-alias nxtbuild="yarn build && yarn export"
-alias nxtstart="yarn start"
-alias nxtlint="yarn lint"
+alias nxi="npx create-next-app@latest"
 
 # YARN ALIASES
 # ----------------------------------------------
@@ -320,40 +313,41 @@ alias yo="yarn outdated"
 
 # NPM ALIASES
 # ----------------------------------------------
-alias nconf="npm init @eslint/config"
 alias ni="npm init"
-alias nr="npm run"
-alias nrb="npm run build"
-alias nrs="npm run start"
-alias nrl="npm run lint"
-alias nrt="npm run test"
-alias nrw="npm run watch"
-alias nt="npm test"
+alias nu="npm update"
+alias no="npm outdated"
+alias np="npm prune"
+alias na="npm audit"
 alias nig="npm install -g"
 alias nin="npm install"
 alias nid="npm install --save-dev"
 alias nie="npm install --save-dev --save-exact"
 alias nun="npm uninstall"
-alias ning="npm install -g"
-alias nung="npm uninstall -g"
-alias nu="npm update"
 alias nri="npm run upgrade-interactive"
-alias no="npm outdated"
-alias np="npm prune"
-alias nc="npm cache clean"
-alias na="npm audit"
+alias ncc="npm cache clean"
 alias naf="npm audit fix"
+alias nconf="npm init @eslint/config"
 
 # HUSKY ALIASES
 # ----------------------------------------------
 huskySet() {
-  echo "Install Husky as a dev dependancy."
+  echo "Let us setup anc configure Husky! 🐕🐕"
+  echo "***************************************************"
+  echo "Install Husky as a dev dependancy. 🧒🧒"
+  echo "***************************************************"
   npm install --save-dev husky
-  echo "Initialize Husky."
+  echo "***************************************************"
+  echo "Initialize Husky. 🛫🛫"
+  echo "***************************************************"
   npx husky init
-  echo "Create pre-commit file."
+  echo "***************************************************"
+  echo "Create pre-commit file. 😁😁"
+  echo "***************************************************"
   npm run prepare
 }
+
+# TODO: Modify the following code to add lint-staged to the husky pre-commit. Then add to above alias function.
+## echo "# New Repo" >> README.md
 
 # ADD VSCODE AS DEFAULT EDITOR
 # ----------------------------------------------
