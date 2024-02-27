@@ -234,7 +234,7 @@ gitCm() {
     echo "*************************************************"
   else
     echo "*************************************************"
-    echo "Great message! Committing now. 🗒️⬆️"
+    echo "Great message! Committing now. DO NOT FORGET TO PUSH TO REMOTE using alias `gp` 🗒️⬆️"
     echo "*************************************************"
     git commit -m "$1"
   fi
