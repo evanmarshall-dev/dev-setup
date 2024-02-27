@@ -234,11 +234,15 @@ gitCm() {
     echo "*************************************************"
   else
     echo "*************************************************"
-    echo "Great message! Committing now. DO NOT FORGET TO PUSH TO REMOTE using alias `gp` 🗒️⬆️"
+    echo "Great message! Committing now. 🗒️🗒️"
     echo "*************************************************"
     git commit -m "$1"
   fi
-} # Adds all changed files to staging and generates a commit with message. Append the git commit message to the end of this function alias within quotes.
+  echo "***************************************************"
+  echo "All checks cleared (husky, git staged), pushing now! ⬆️⬆️"
+  echo "***************************************************"
+  git push
+} # Adds all changed files to staging and generates a commit with message. Append the git commit message to the end of this function alias within quotes. If all checks passed, it then pushes to remote repo.
 
 alias gs="echo -e 'All right! What is going on here? 😕\n\n' && git status" # Provides git status.
 alias gcb="echo -e 'A new branch is sprouting on your Git tree 🌳\n\n' && git checkout -b" # Switch to and create branch. Append branch name to the end of this alias.
