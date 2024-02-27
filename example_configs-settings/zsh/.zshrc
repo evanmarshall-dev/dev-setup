@@ -52,8 +52,10 @@ hiddenOff() {
   echo "DONE! 😃"
 } # Hide hidden folders in MacOSX.
 
-# CLI ALIASES
+# VSCODE & CLI ALIASES
 # ----------------------------------------------
+alias c="echo -e 'Open up vscode in current working directory!! 👐\n\n' && code ." # Opens up vscode in current working directory.
+alias cc="echo -e 'Open up vscode in specific directory!! 👐\n\n' && code $1" # Append directory or path to open up vscode in said directory.
 alias up="echo -e 'Going up a directory, boiiii! 🛸\n\n' && cd .." # Up one directory.
 alias in="echo -e 'Getting all up in that directory! 🚪\n\n' && cd" # Out to root directory or if you follow this command with a directory name or path it moves into said directory.
 alias md="echo -e 'You make that folder! 📁\n\n' && mkdir" # Create a directory.
