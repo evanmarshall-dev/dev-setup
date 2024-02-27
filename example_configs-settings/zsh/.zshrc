@@ -8,8 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH THEMES
 # ----------------------------------------------
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="random"
+ZSH_THEME="agnoster"
+# ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -68,6 +68,7 @@ plugins=(
   npm
   nvm
   history
+  vscode
   macos
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -215,7 +216,7 @@ alias gucl="echo -e 'Clean up, clean up, everybody clean up! 🎵\n\n' && gulp c
 alias gcon="echo -e 'Opening your global Git Config file. 🎛️\n\n' && code ~/.gitconfig" # Opens global gitconfig file in vscode.
 alias gig="echo -e 'Opening up your global Git Ignore file. 🎛️\n\n' && code ~/.gitignore_global" # Opens global gitconfig file in vscode.
 
-gitCm() {
+gitCom() {
   echo "You have done some great work! Now let us send that up to the repo for safe keeping. ✅✅"
   echo "***************************************************"
   echo "First, let us check the status of the local work vs remote repo. 🌱🌱"
@@ -237,11 +238,11 @@ gitCm() {
     echo "Great message! Committing now. 🗒️🗒️"
     echo "*************************************************"
     git commit -m "$1"
+    echo "*************************************************"
+    echo "All checks cleared (husky, git staged), pushing now! ⬆️⬆️"
+    echo "*************************************************"
+    git push
   fi
-  echo "***************************************************"
-  echo "All checks cleared (husky, git staged), pushing now! ⬆️⬆️"
-  echo "***************************************************"
-  git push
 } # Adds all changed files to staging and generates a commit with message. Append the git commit message to the end of this function alias within quotes. If all checks passed, it then pushes to remote repo.
 
 alias gs="echo -e 'All right! What is going on here? 😕\n\n' && git status" # Provides git status.
@@ -251,16 +252,46 @@ alias gc="echo -e 'Let us The Sixth Day this shhhh! 🕕\n\n' && git clone" # Cl
 alias gpu="echo -e 'What are they doing up there? Pull it down! 😶‍🌫️\n\n' && git pull" # Pulls changes from remote branch to local.
 alias gp="echo -e 'Alright, we done. Push it up! 🫷⬆️\n\n' && git push" # Pushes local changes to origin.
 
-# SETUP LOCAL CODEBASE TO REMOTE REPO
-# ----------------------------------------------
-alias gin="git init" # Adds git initialized directory to local codebase.
-### Commit changes
-alias gcf="git commit -m 'first commit'"
-### Make sure on main branch
-alias gbm="git branch -M main"
-alias grao="git remote add origin"
-### Push local changes to remote main branch
-alias gpom="git push -u origin main"
+gitNew() {
+  echo "You just created a local project and a blank remote repo. Let us connect the two! 👊👊"
+  echo "***************************************************"
+  echo "First, let us create a template README for the repo. 📖📖"
+  echo "***************************************************"
+  echo "# New Repo" >> README.md
+  echo "***************************************************"
+  echo "Now, let us initiate a git directory in your local project. 📂📂"
+  echo "***************************************************"
+  git init
+  echo "***************************************************"
+  echo "Adding README.md to staging. 👩‍🎤👩‍🎤"
+  echo "***************************************************"
+  git add README.md
+  echo "***************************************************"
+  echo "Create a commit message for the first commit to remote repo. 🗒️🗒️"
+  echo "***************************************************"
+  git commit -m "Created new local project"
+  echo "***************************************************"
+  echo "Set the default branch of the project to main. 🌳🌳"
+  echo "***************************************************"
+  git branch -M main
+  echo "***************************************************"
+  echo "Now, checking to see if you added appended the remote repo name to this command. ❓❓"
+  echo "***************************************************"
+  if [ ! -n "$1" ]; then
+    echo "*************************************************"
+    echo "Enter the remote repo name, silly! 😠😠"
+    echo "*************************************************"
+  else
+    echo "*************************************************"
+    echo "Great, you added the remote repo name, now we will add remote repo as the origin. 😀😀"
+    echo "*************************************************"
+    git remote add origin git@dgit:evanmarshall-dev/"$1".git
+    echo "*************************************************"
+    echo "Push committed local file to the remote repo. ⬆️⬆️"
+    echo "*************************************************"
+    git push -u origin main
+  fi
+} # Connect a local project to an empty remote git repo, add template README file, stage README, commit README, and then push README to the remote repo or origin.
 
 # NEXTJS ALIASES
 # ----------------------------------------------
