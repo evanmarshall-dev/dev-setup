@@ -108,8 +108,8 @@ alias -g uup="echo -e 'Your linux packages are looking a bit dated... 👴\n\n' 
 
 # ZSH/OH-MY-ZSH ALIASES
 # ----------------------------------------------
-alias zed="echo -e 'Editing your ZSH config, eh? 👨‍🔬\n\n' && code ~/.zshrc" # Edit global ZSH config.
-alias zre="echo -e 'It is annoying, but we have to refresh the config EVERYTIME we make a change... 🙃\n\n' && source ~/.zshrc" # Reloads ZSH config after changes.
+alias zed="echo -e 'Editing your ZSH config, eh? 👨‍🔬\n\n' && code ${HOME}/.zshrc" # Edit global ZSH config.
+alias zre="echo -e 'It is annoying, but we have to refresh the config EVERYTIME we make a change... 🙃\n\n' && source ${HOME}/.zshrc" # Reloads ZSH config after changes.
 
 zshSet() {
   echo "Get ready for some linuxy goodness!! 🍕🍕"
@@ -129,11 +129,11 @@ zshSet() {
 
 # SSH ALIASES
 # ----------------------------------------------
-alias shao="echo -e 'Making sure you are in the correct directory before creating some SSH stuff! 🔍\n\n' && cd ~/.ssh" # Navigate to global ssh directory.
-alias shacon="echo -e 'Open that config... SHHHHH! 🤫\n\n' && code ~/.ssh/config" # Edit global ssh configuration using vscode.
+alias shao="echo -e 'Making sure you are in the correct directory before creating some SSH stuff! 🔍\n\n' && cd ${HOME}/.ssh" # Navigate to global ssh directory.
+alias shacon="echo -e 'Open that config... SHHHHH! 🤫\n\n' && code ${HOME}/.ssh/config" # Edit global ssh configuration using vscode.
 alias shagen="echo -e 'The key to your heart :) 💞\n\n' && ssh-keygen -t ed25519 -C" # Creates a local SSH key if followed by filename (i.e. personal-github).
 alias shagent="echo -e 'I do not know what this is, but we gotta do it or else the next step will not work... 😕\n\n' && eval '$(ssh-agent -s)'" # Starts SSH agent.
-alias shakey="echo -e 'The name is Bond, James Bond... and I need that key! 🔑\n\n' && ssh-add -K ~/.ssh/" # Adds SSH key to agent. Make sure you add filename created with skgen alias to the end of this alias.
+alias shakey="echo -e 'The name is Bond, James Bond... and I need that key! 🔑\n\n' && ssh-add -K ${HOME}/.ssh/$1" # Adds SSH key to agent. Make sure you add filename created with skgen alias to the end of this alias.
 alias shatest="echo -e 'Did it work?? ✋\n\n' && ssh -T git@" # Test your connection. Make sure you add your Host name created during the config file setup, to the end of this alias.
 
 # GULP ALIASES
@@ -148,8 +148,8 @@ alias gucl="echo -e 'Clean up, clean up, everybody clean up! 🎵\n\n' && gulp c
 
 # GIT ALIASES
 # ----------------------------------------------
-alias gcon="echo -e 'Opening your global Git Config file. 🎛️\n\n' && code ~/.gitconfig" # Opens global gitconfig file in vscode.
-alias gig="echo -e 'Opening up your global Git Ignore file. 🎛️\n\n' && code ~/.gitignore_global" # Opens global gitconfig file in vscode.
+alias gcon="echo -e 'Opening your global Git Config file. 🎛️\n\n' && code ${HOME}/.gitconfig" # Opens global gitconfig file in vscode.
+alias gig="echo -e 'Opening up your global Git Ignore file. 🎛️\n\n' && code ${HOME}/.gitignore_global" # Opens global gitconfig file in vscode.
 alias gs="echo -e 'All right! What is going on here? 😕\n\n' && git status" # Provides git status.
 alias gcb="echo -e 'A new branch is sprouting on your Git tree 🌳\n\n' && git checkout -b" # Switch to and create branch. Append branch name to the end of this alias.
 alias gsb="echo -e 'Let us climb to that branch! 🌴\n\n' && git checkout" # Switched to branch specified after this alias.
