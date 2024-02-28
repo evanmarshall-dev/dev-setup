@@ -27,6 +27,14 @@
   brew install --cask visual-studio-code
   ```
 
+  - In order to use the `code` shortcut in the terminal you need to install the code command to the PATH (MacOSX only). You do this by pressing the following keyboard shortcut in vscode:
+
+  ```javascript
+  CMD + SHIFT + P; // To open up the command palette.
+  // Type in the following command to complete:
+  // Shell Command: Install 'code' command in PATH
+  ```
+
 - Install terminal applications
 
   - In user directory, type the following code followed by ENTER/RETURN:
