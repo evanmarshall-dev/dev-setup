@@ -56,6 +56,7 @@ hiddenOff() {
 # ----------------------------------------------
 alias c="echo -e 'Open up vscode in current working directory!! 👐\n\n' && code ." # Opens up vscode in current working directory.
 alias cc="echo -e 'Open up vscode in specific directory!! 👐\n\n' && code $1" # Append directory or path to open up vscode in said directory.
+alias codedir="code ${HOME}/Library/'Application Support'/Code/User" # Opens up vscode directory containing settings.json, keybindings and snippets.
 alias up="echo -e 'Going up a directory, boiiii! 🛸\n\n' && cd .." # Up one directory.
 alias in="echo -e 'Getting all up in that directory! 🚪\n\n' && cd" # Out to root directory or if you follow this command with a directory name or path it moves into said directory.
 alias md="echo -e 'You make that folder! 📁\n\n' && mkdir" # Create a directory.
@@ -285,6 +286,30 @@ huskySet() {
 
 # TODO: Modify the following code to add lint-staged to the husky pre-commit. Then add to above alias function.
 ## echo "# New Repo" >> README.md
+
+# VSCODE KEYBOARD SHORTCUTS
+# ----------------------------------------------
+### ? You can find a list of keyboard shortcut by clicking the cog icon in vscode action bar.
+## CMD + W (Closes current editor file)
+## CMD + S (Saves current editor file)
+## CMD + P (Shows recently opened files)
+### ? If you type @ after CMD + P you will be able to search for specific elements within the currently open editor file.
+## CMD + L (Highlights the current line and if pressed again it will go to the next line)
+## CMD + D (Selects the next instance of what you have highlighted. This is like find and replace (CMD + F))
+## OPTION + CLICK (Allows selecting multiple areas at once)
+## CTRL + G (Allows searching for a specific line of code)
+## CMD + Z (Undoes last action, also works in file tree)
+## CMD + SHIFT + Z (Undoes last undo, also works in file tree)
+## CMD + X (Cuts the line of code where the cursor is)
+## OPTION + ARROW-DOWN || ARROW-UP (Moves line of code up or down)
+## SHIFT + OPTION + ARROW-DOWN (Copies highlighted line to below)
+## CMD + SHIFT + P (Opens up the command pallette)
+## CMD + OPTION + ] || [ (Folds or unfolds current block of code)
+## OPTION + B (Closes file tree and actions panel (Only when settings.json, code actions extension and key bindings settings are configured))
+## CTRL + SPACE (Brings up intellisense and completions for the current highlighted element or open editor file)
+### ? Typescript tends to provide better intellisense due to it having exlplicit types defined.
+## CTRL + SHIFT + SPACE (While within parenthesis, will generate parameter hints)
+### ? Opening command palette and typing EMMET: Balance (outward) will select all sibling elements within a parent then opening command palette and typing EMMET: Wrap with Abbreviation will wrap all selected tags with one you specify.
 
 # NEEDED FOR NVM
 # ----------------------------------------------
