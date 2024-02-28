@@ -101,7 +101,7 @@
   npm install -g npm@latest
   ```
 
-  - For managing node packages I prefer YARN as it is newer, easier to use, and more secure. To install yarn type the following command in the terminal:
+  - For managing node packages you can use YARN or simply the global install of NPM from above. To install yarn type the following command in the terminal (It is not a problem to have them both installed):
 
   ```javascript
   npm install -g yarn

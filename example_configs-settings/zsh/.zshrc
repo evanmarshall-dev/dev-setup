@@ -290,6 +290,7 @@ huskySet() {
 # VSCODE KEYBOARD SHORTCUTS
 # ----------------------------------------------
 ### ? You can find a list of keyboard shortcut by clicking the cog icon in vscode action bar.
+## CTRL + ` (Opens the integrated terminal)
 ## CMD + W (Closes current editor file)
 ## CMD + S (Saves current editor file)
 ## CMD + P (Shows recently opened files)
@@ -310,6 +311,8 @@ huskySet() {
 ### ? Typescript tends to provide better intellisense due to it having exlplicit types defined.
 ## CTRL + SHIFT + SPACE (While within parenthesis, will generate parameter hints)
 ### ? Opening command palette and typing EMMET: Balance (outward) will select all sibling elements within a parent then opening command palette and typing EMMET: Wrap with Abbreviation will wrap all selected tags with one you specify.
+### ? If you want to see all the references to a particular element in code, you can right-click and select "Peek>Peek References." If you want to see where the original code was implemented you would select "Peek>Peek Implementations." You can also follow the same process for Definitions and Type Definitions.
+### ? If you want to rename a function for example, you would select "Peek>Peek Implementations" then Right click the function name and select "Rename Symbol." This is a safer way to rename all related implementations of an element in code.
 
 # NEEDED FOR NVM
 # ----------------------------------------------
