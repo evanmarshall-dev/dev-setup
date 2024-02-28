@@ -64,6 +64,8 @@
   brew install --cask font-hack-nerd-font
   ```
 
+  - Or go to [FiraCode Font](https://github.com/tonsky/FiraCode) to download another great ligature-ready font.
+
 - Follow along with my vscode settings.json after installing the fonts and ZSH. We will add on to these settings as we continue on with the following setup. The example settings.json is referenced [HERE](#vscode-settings)
 
 - Activate [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) in vscode and link to your Github account.
