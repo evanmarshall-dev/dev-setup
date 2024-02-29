@@ -58,19 +58,19 @@ alias c="echo -e 'Open up vscode in current working directory!! 👐\n\n' && cod
 alias cc="echo -e 'Open up vscode in specific directory!! 👐\n\n' && code $1" # Append directory or path to open up vscode in said directory.
 alias codedir="code ${HOME}/Library/'Application Support'/Code/User" # Opens up vscode directory containing settings.json, keybindings and snippets.
 alias up="echo -e 'Going up a directory, boiiii! 🛸\n\n' && cd .." # Up one directory.
-alias in="echo -e 'Getting all up in that directory! 🚪\n\n' && cd" # Out to root directory or if you follow this command with a directory name or path it moves into said directory.
-alias md="echo -e 'You make that folder! 📁\n\n' && mkdir" # Create a directory.
-alias dd="echo -e 'Nobody wants that folder! 🤮\n\n' && rm -r" # Remove a directory recursively (Removes all sub-directories and files).
-alias mf="echo 'Populating your computer with little baby files! 👶\n\n' && touch" # Create a file.
-alias df="echo -e 'The milk was a bad choice, remove that file! 🥛\n\n' && rm" # Remove a file.
-alias m="echo -e 'Just keep moving, just keep moving! 🐠\n\n' && mv" # Move a file.
-alias c="echo -e 'Copying that file?? How about you be original! ©️\n\n' && cp" # Copy a file.
+alias in="echo -e 'Getting all up in that directory! 🚪\n\n' && cd" # Out to root directory or if you follow this command with a directory name or path it moves into said directory. Use ZSH autosuggest to append directory name to end of this alias.
+alias md="echo -e 'You make that folder! 📁\n\n' && mkdir $1" # Create a directory. Append directory name to this alias.
+alias dd="echo -e 'Nobody wants that folder! 🤮\n\n' && rm -r" # Remove a directory recursively (Removes all sub-directories and files). Use ZSH autosuggest to append directory name to end of this alias.
+alias mf="echo 'Populating your computer with little baby files! 👶\n\n' && touch $1" # Create a file. Append the name of the file (including file type) to the end of this alias.
+alias df="echo -e 'The milk was a bad choice, remove that file! 🥛\n\n' && rm" # Remove a file. Use ZSH autosuggest to append file name to the end of this alias.
+alias m="echo -e 'Just keep moving, just keep moving! 🐠\n\n' && mv" # Move a file. Append the file name and destination path to the end of this alias.
+alias c="echo -e 'Copying that file?? How about you be original! ©️\n\n' && cp" # Copy a file. Append the file name and destination path to the end of this alias.
 alias l="echo -e 'Ooooo, what is in here?! 🧐\n\n' && ls" # List contents of current directory.
 alias la="echo -e 'Ooooo, piece a candy! 🍬\n\n' && ls -a" # Lists all contents including hidden files and admin permissions.
 alias p="echo -e 'Where are we again? 😳\n\n' && pwd" # Displays your current directory.
 alias cl="echo -e 'Time to clean up, it is messy in here!! 🧹\n\n' && clear" # Clears terminal/command window.
 
-mkcd() {
+makeEn() {
   echo "Let us create a folder then enter it!"
   if [ ! -n "$1" ]; then
     echo "*************************************************"
@@ -128,7 +128,7 @@ zshSet() {
   echo "Install Oh My ZSH!! 🤩🤩"
   echo "***************************************************"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-}
+} # Check if ZSH is installed, set ZSH as the default shell, and then install Oh My ZSH.
 
 # SSH ALIASES
 # ----------------------------------------------
@@ -137,14 +137,14 @@ alias shacon="echo -e 'Open that config... SHHHHH! 🤫\n\n' && code ${HOME}/.ss
 alias shagen="echo -e 'The key to your heart :) 💞\n\n' && ssh-keygen -t ed25519 -C" # Creates a local SSH key if followed by filename (i.e. personal-github).
 alias shagent="echo -e 'I do not know what this is, but we gotta do it or else the next step will not work... 😕\n\n' && eval '$(ssh-agent -s)'" # Starts SSH agent.
 alias shakey="echo -e 'The name is Bond, James Bond... and I need that key! 🔑\n\n' && ssh-add -K ${HOME}/.ssh/$1" # Adds SSH key to agent. Make sure you add filename created with skgen alias to the end of this alias.
-alias shatest="echo -e 'Did it work?? ✋\n\n' && ssh -T git@" # Test your connection. Make sure you add your Host name created during the config file setup, to the end of this alias.
+alias shatest="echo -e 'Did it work?? ✋\n\n' && ssh -T git@$1" # Test your connection. Make sure you add your Host name created during the config file setup, to the end of this alias.
 
 # GULP ALIASES
 # ----------------------------------------------
 alias gu="echo -e 'GULP! 😧\n\n' && gulp" # Runs gulp command.
 alias gufr="echo -e 'LES GULP!? 👨‍🎨\n\n' && gulp devFr" # Runs French gulp command.
-alias gut="echo -e 'Let us check out that work! 🤑\n\n' && gulp --template" # Runs development task on HTML template if followed by template name. If none provided, default.html template will be used.
-alias gutfr="echo -e 'Tu es... Grande poulette! 👨‍🎨\n\n' && gulp devFr --template" # Runs French development task on HTML template if followed by template name. If none provided, default.html template will be used.
+alias gut="echo -e 'Let us check out that work! 🤑\n\n' && gulp --template $1" # Runs development task on HTML template if followed by template name. If none provided, default.html template will be used.
+alias gutfr="echo -e 'Tu es... Grande poulette! 👨‍🎨\n\n' && gulp devFr --template $1" # Runs French development task on HTML template if followed by template name. If none provided, default.html template will be used.
 alias gub="echo -e 'Well you are just a cute little Bob the builder! 👷‍♂️\n\n' && gulp build" # Runs build tasks.
 alias gubfr="echo -e 'Es que je puis aller aux toilettes! 👨‍🎨\n\n' && gulp buildFr" # Runs the French build tasks.
 alias gucl="echo -e 'Clean up, clean up, everybody clean up! 🎵\n\n' && gulp clean" # Runs the clean or delete task for dev and prod directories.
@@ -154,9 +154,9 @@ alias gucl="echo -e 'Clean up, clean up, everybody clean up! 🎵\n\n' && gulp c
 alias gcon="echo -e 'Opening your global Git Config file. 🎛️\n\n' && code ${HOME}/.gitconfig" # Opens global gitconfig file in vscode.
 alias gig="echo -e 'Opening up your global Git Ignore file. 🎛️\n\n' && code ${HOME}/.gitignore_global" # Opens global gitconfig file in vscode.
 alias gs="echo -e 'All right! What is going on here? 😕\n\n' && git status" # Provides git status.
-alias gcb="echo -e 'A new branch is sprouting on your Git tree 🌳\n\n' && git checkout -b" # Switch to and create branch. Append branch name to the end of this alias.
-alias gsb="echo -e 'Let us climb to that branch! 🌴\n\n' && git checkout" # Switched to branch specified after this alias.
-alias gc="echo -e 'Let us The Sixth Day this shhhh! 🕕\n\n' && git clone" # Clones a remote repo. Append repo URL or SSH to this alias.
+alias gcb="echo -e 'A new branch is sprouting on your Git tree 🌳\n\n' && git checkout -b $1" # Switch to and create branch. Append branch name to the end of this alias.
+alias gsb="echo -e 'Let us climb to that branch! 🌴\n\n' && git checkout $1" # Switched to branch specified after this alias.
+alias gc="echo -e 'Let us The Sixth Day this shhhh! 🕕\n\n' && git clone $1" # Clones a remote repo. Append repo URL or SSH to this alias.
 alias gpu="echo -e 'What are they doing up there? Pull it down! 😶‍🌫️\n\n' && git pull" # Pulls changes from remote branch to local.
 alias gp="echo -e 'Alright, we done. Push it up! 🫷⬆️\n\n' && git push" # Pushes local changes to origin.
 
@@ -236,44 +236,43 @@ gitNew() {
 
 # NEXTJS ALIASES
 # ----------------------------------------------
-alias nxi="npx create-next-app@latest"
+alias nxi="npx create-next-app@latest" # Launch the config setup for a NextJS app.
 
 # YARN ALIASES
 # ----------------------------------------------
-alias y="yarn"
-alias yi="yarn init -y"
-alias ya="yarn add"
-alias yr="yarn remove"
-alias yad="yarn add -D"
-alias yga="yarn global add"
-alias ygr="yarn global remove"
-alias yu="yarn upgrade-interactive --latest"
-alias ygu="yarn global upgrade"
-alias yl="yarn list --depth=0"
-alias ygl="yarn global list --depth=0"
-alias yo="yarn outdated"
+alias y="yarn install" # Install yarn packages.
+alias yi="yarn init -y" # Initialize yarn with yarn.lock file in current project.
+alias ya="yarn add $1" # Add an yarn package and apply as a project dependancy. Append the package name to the end of the alias.
+alias yr="yarn remove $1" # Remove an yarn package. Append the package name to the end of the alias.
+alias yad="yarn add -D $1" # Add an yarn package and apply as a dev dependancy. Append package name to the end of the alias.
+alias yga="yarn global add $1" # Add an yarn package and have it installed globally. Append the package name to the end of the alias.
+alias ygr="yarn global remove $1" # Remove a globally installed yarn package. Append the package name to the end of the alias.
+alias yu="yarn upgrade-interactive --latest" # Upgrade all yarn packages to their latest version.
+alias ygu="yarn global upgrade" # Upgrade global yarn packages.
+alias yl="yarn list --depth=0" # List local yarn packages.
+alias ygl="yarn global list --depth=0" # List global yarn packages.
+alias yo="yarn outdated" # List outdated yarn packages.
 
 # NPM ALIASES
 # ----------------------------------------------
-alias ni="npm init"
-alias nu="npm update"
-alias no="npm outdated"
-alias np="npm prune"
-alias na="npm audit"
-alias nig="npm install -g"
-alias nin="npm install"
-alias nid="npm install --save-dev"
-alias nie="npm install --save-dev --save-exact"
-alias nun="npm uninstall"
-alias nri="npm run upgrade-interactive"
-alias ncc="npm cache clean"
-alias naf="npm audit fix"
-alias nconf="npm init @eslint/config"
+alias ni="npm init" # Initialize npm in current project with a package.lock file.
+alias nu="npm-check -u" # Update npm packages using interactive guide.
+alias no="npm outdated" # List all outdated npm packages.
+alias np="npm prune" # Removes extraneous npm packages.
+alias na="npm audit" # Run a security audit for installed npm packages.
+alias naf="npm audit fix" # Tries to fix any security vulnerabilities.
+alias nig="npm install -g $1" # Install an npm package globally. Append package name to the end of the alias.
+alias nin="npm install $1" # Install npm package as a project dependancy (Anything that is needed in production). Append package name to the end of the alias.
+alias nid="npm install --save-dev $1" # Install an npm package as a dev dependancy (Only needed in development). Append package name to the end of the alias.
+alias nie="npm install --save-dev --save-exact $1" # Install an npm package as a dev dependancy and pin it at the current version. Append the package name to the end of the alias.
+alias nun="npm uninstall $1" # Uninstall npm packages. Append the package name to the end of the alias.
+alias ncc="npm cache clean" # Deletes all of the data in the cache folder.
+alias nconf="npm init @eslint/config" # Initializes eslint in the project and runs the setup/config process.
 
 # HUSKY ALIASES
 # ----------------------------------------------
 huskySet() {
-  echo "Let us setup anc configure Husky! 🐕🐕"
+  echo "Let us setup and configure Husky! 🐕🐕"
   echo "***************************************************"
   echo "Install Husky as a dev dependancy. 🧒🧒"
   echo "***************************************************"
@@ -286,7 +285,7 @@ huskySet() {
   echo "Create pre-commit file. 😁😁"
   echo "***************************************************"
   npm run prepare
-}
+} # Installs Husky, initializes it and then creates a pre-commit file.
 
 # TODO: Modify the following code to add lint-staged to the husky pre-commit. Then add to above alias function.
 ## echo "# New Repo" >> README.md
