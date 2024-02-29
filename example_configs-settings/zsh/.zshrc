@@ -187,6 +187,10 @@ gitCom() {
     echo "*************************************************"
     git push
   fi
+  echo "***************************************************"
+  echo "Let us get some details about the latest commit. 🖨️🖨️"
+  echo "***************************************************"
+  git log
 } # Adds all changed files to staging and generates a commit with message. Append the git commit message to the end of this function alias within quotes. If all checks passed, it then pushes to remote repo.
 
 gitNew() {
