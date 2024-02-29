@@ -181,7 +181,7 @@ gitCom() {
     echo "*************************************************"
     echo "Great message! Committing now. 🗒️🗒️"
     echo "*************************************************"
-    git commit -m "$1"
+    git commit -m $1
     echo "*************************************************"
     echo "All checks cleared (husky, git staged), pushing now! ⬆️⬆️"
     echo "*************************************************"
