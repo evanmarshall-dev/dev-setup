@@ -157,6 +157,40 @@ My git config example can be found [HERE](https://github.com/evanmarshall-dev/de
 
 My git ignore example can be found [HERE](https://github.com/evanmarshall-dev/dev-setup/blob/main/example_configs-settings/git/.gitignore_global). When committing files to Github there are sometimes large libraries or files, which are not needed. Gitignore prevents these files/changes from being pushed to your remote Github repository.
 
+#### VSCODE Keyboard Shortcuts & Instructions
+
+You can find a list of keyboard shortcut by clicking the cog icon in vscode action bar, but the following are some useful ones:
+
+- Open the integrated terminal with `` CTRL + `  ``.
+- Close the current working file with `CMD + W`.
+- Save the current working file with `CMD + S`.
+- Show recently opened files with `CMD + P`.
+  - If you type `@` following the `CMD + P` command, you will be able to search for specific elements within the current working file.
+  - You can also type `CMD + SHIFT + .` to perform the above command within the current working file directly (not the top search panel).
+  - If you type `#` after the `CMD + P` command, you will be able to search the current working file by symbols.
+- You can highlight the current line using `CMD + L` and if you run the same command again it will highlight the next line (This command is good when you want to comment out multiple lines when you follow-up using the command `CMD + /`).
+- If you highlight an element and press `CMD + D` it will highlight the next instance of the highlighted element. This can be used like the find and replace command (`CMD + F`).
+- If you hold down `OPTION` and then click in the file you can place a cursor in multiple spots.
+- If you know the line number in the code and want to search for a specific line of code press `CTRL + G` followed by the line number.
+- If you want to undo the last action press `CMD + Z`.
+- If you want to undo the last undo then press `CMD + SHIFT + Z`.
+- If you want to cut the line where the cursor is then press `CMD + X`.
+- If you want to move a whole line up or down then press `OPTION + ARROW-UP || ARROW-DOWN`.
+- If you want to copy a full line up or down then press `SHIFT + OPTION + ARROW-DOWN || ARROW-UP`.
+- To open up the command palette press `CMD + SHIFT + P`.
+- To fold or un-fold the current block of code press `CMD + OPTION ] || [`.
+- With some configuration in settings.json, code actions extension and key bindings settings you can close the file tree and action panel by pressing `OPTION + B`.
+- To bring up intellisense and completions for the currently highlighted element press `CTRL + SPACE`.
+- If you have the inside of parenthesis of a function selected and press `CTRL + SHIFT + SPACE` then it will provide suggested parameters/arguments for the function.
+- While inside the terminal if you press `CMD + ARROW-RIGHT || ARROW-LEFT` the cursor will jump to the beginning or end of the current command.
+
+Notes:
+
+- **_Typescript_** tends to provide better intellisense due to it having explicit types defined.
+- Opening command palette and typing `EMMET: Balance (outward)` will select all sibling elements within a parent then opening command palette and typing `EMMET: Wrap with Abbreviation` will wrap all selected tags with one you specify.
+- If you want to see all the references to a particular element in code, you can right-click and select `Peek > Peek References`. If you want to see where the original code was implemented you would select `Peek > Peek Implementations`. You can also follow the same process for **Definitions** and **Type Definitions**.
+- If you want to rename a function for example, you would select `Peek > Peek Implementations` then **Right** click the function name and select `Rename Symbol`. This is a safer way to rename all related implementations of an element in code.
+
 #### Recommended add-ons/plug-ins
 
 | 1 | [ZSH Auto Suggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh) | As you type commands in terminal ZSH will suggest completions. It helps speed up the process for common terminal commands. Make sure you follow the install instructions for Oh My ZSH.

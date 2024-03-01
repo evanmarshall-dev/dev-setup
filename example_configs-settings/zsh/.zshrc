@@ -290,35 +290,6 @@ huskySet() {
 # TODO: Modify the following code to add lint-staged to the husky pre-commit. Then add to above alias function.
 ## echo "# New Repo" >> README.md
 
-# VSCODE KEYBOARD SHORTCUTS
-# ----------------------------------------------
-### ? You can find a list of keyboard shortcut by clicking the cog icon in vscode action bar.
-## CTRL + ` (Opens the integrated terminal)
-## CMD + W (Closes current editor file)
-## CMD + S (Saves current editor file)
-## CMD + P (Shows recently opened files)
-### ? If you type @ after CMD + P you will be able to search for specific elements within the currently open editor file. Or you can type CMD + SHIFT + . to open same command within file.
-### ? If you type # after CMD + P you will be able to search current editor file by symbols.
-## CMD + L (Highlights the current line and if pressed again it will go to the next line. This is also good for commenting out multiple lines by following up with CMD + /).
-## CMD + D (Selects the next instance of what you have highlighted. This is like find and replace (CMD + F))
-## OPTION + CLICK (Allows selecting multiple areas at once)
-## CTRL + G (Allows searching for a specific line of code)
-## CMD + Z (Undoes last action, also works in file tree)
-## CMD + SHIFT + Z (Undoes last undo, also works in file tree)
-## CMD + X (Cuts the line of code where the cursor is)
-## OPTION + ARROW-DOWN || ARROW-UP (Moves line of code up or down)
-## SHIFT + OPTION + ARROW-DOWN (Copies highlighted line to below)
-## CMD + SHIFT + P (Opens up the command pallette)
-## CMD + OPTION + ] || [ (Folds or unfolds current block of code)
-## OPTION + B (Closes file tree and actions panel (Only when settings.json, code actions extension and key bindings settings are configured))
-## CTRL + SPACE (Brings up intellisense and completions for the current highlighted element or open editor file)
-### ? Typescript tends to provide better intellisense due to it having exlplicit types defined.
-## CTRL + SHIFT + SPACE (While within parenthesis, will generate parameter hints)
-## CMD + ARROW-RIGHT || ARROW-LEFT (Within terminal will jump to start or end of command)
-### ? Opening command palette and typing EMMET: Balance (outward) will select all sibling elements within a parent then opening command palette and typing EMMET: Wrap with Abbreviation will wrap all selected tags with one you specify.
-### ? If you want to see all the references to a particular element in code, you can right-click and select "Peek>Peek References." If you want to see where the original code was implemented you would select "Peek>Peek Implementations." You can also follow the same process for Definitions and Type Definitions.
-### ? If you want to rename a function for example, you would select "Peek>Peek Implementations" then Right click the function name and select "Rename Symbol." This is a safer way to rename all related implementations of an element in code.
-
 # NEEDED FOR NVM
 # ----------------------------------------------
 export NVM_DIR="$HOME/.nvm"
