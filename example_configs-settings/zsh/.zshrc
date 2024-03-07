@@ -152,6 +152,7 @@ alias gucl="echo -e 'Clean up, clean up, everybody clean up! 🎵\n\n' && gulp c
 # GIT ALIASES
 # ----------------------------------------------
 alias gcon="echo -e 'Opening your global Git Config file. 🎛️\n\n' && code ${HOME}/.gitconfig" # Opens global gitconfig file in vscode.
+alias gup="git config --global $1" # Update Git Config parameter.
 alias gig="echo -e 'Opening up your global Git Ignore file. 🎛️\n\n' && code ${HOME}/.gitignore_global" # Opens global gitconfig file in vscode.
 alias gs="echo -e 'All right! What is going on here? 😕\n\n' && git status" # Provides git status.
 alias gcb="echo -e 'A new branch is sprouting on your Git tree 🌳\n\n' && git checkout -b $1" # Switch to and create branch. Append branch name to the end of this alias.
