@@ -1,21 +1,25 @@
 # .gitconfig
 [core]
 	excludesfile = /Users/evanmarshall/.gitignore_global
-	autocrlf = input
-[color]
-	ui = auto
+	autocrlf = false # For windows to work with Uniz systems.
+	pager = delta
+	editor = code # Editor to edit commit messages. Code might not work.
 [init]
 	defaultBranch = main
 [user]
 	name = evanmarshall-dev
 	email = me@evanmarshall.dev
-[alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[pull]
-	rebase = false
-[credential "https://github.com"]
-	helper =
-	helper = !/usr/local/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !/usr/local/bin/gh auth git-credential
+[commit]
+	verbose = true
+[diff]
+	algorithm = histogram
+[url "git@dgit.com:"]
+	insteadOf = "https://github.com/" # If you need to unlock your SSH key because of this then change insteadOf to pushInsteadOf.
+[credential]
+	helper = osxkeychain # Use Mac keychain for managing credentials.
+[gpg]
+	format = ssh # To sign commits with SSH keys (Might want to disable if this exposes keys).
+[branch]
+	sort = -committerdate
+[merge]
+	conflictstyle = zdiff3
