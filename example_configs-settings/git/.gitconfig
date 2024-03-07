@@ -2,7 +2,6 @@
 [core]
 	excludesfile = /Users/evanmarshall/.gitignore_global
 	autocrlf = false # For windows to work with Uniz systems.
-	pager = delta
 	editor = code # Editor to edit commit messages. Code might not work.
 [init]
 	defaultBranch = main
