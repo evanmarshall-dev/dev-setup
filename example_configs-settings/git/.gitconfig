@@ -1,8 +1,9 @@
 # .gitconfig
 [core]
-	excludesfile = /Users/evanmarshall/.gitignore_global
+	# excludesfile = /Users/evanmarshall/.gitignore_global # This is used for MacOS.
+	excludesfile = /home/gingaranga/.gitignore_global # This is used for Windows WSL.
 	autocrlf = false # For windows to work with Uniz systems.
-	editor = emacs # Editor to edit commit messages. Code might not work.
+	editor = code --wait
 [init]
 	defaultBranch = main
 [user]
