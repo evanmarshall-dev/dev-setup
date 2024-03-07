@@ -2,7 +2,7 @@
 [core]
 	excludesfile = /Users/evanmarshall/.gitignore_global
 	autocrlf = false # For windows to work with Uniz systems.
-	editor = code # Editor to edit commit messages. Code might not work.
+	editor = emacs # Editor to edit commit messages. Code might not work.
 [init]
 	defaultBranch = main
 [user]
@@ -21,4 +21,5 @@
 [branch]
 	sort = -committerdate
 [merge]
-	conflictstyle = zdiff3
+	# conflictstyle = zdiff3 # Update to zdiff3 when git version is 2.35+.
+	conflictstyle = diff3
