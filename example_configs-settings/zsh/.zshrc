@@ -136,7 +136,8 @@ alias shao="echo -e 'Making sure you are in the correct directory before creatin
 alias shacon="echo -e 'Open that config... SHHHHH! 🤫\n\n' && code ${HOME}/.ssh/config" # Edit global ssh configuration using vscode.
 alias shagen="echo -e 'The key to your heart :) 💞\n\n' && ssh-keygen -t ed25519 -C" # Creates a local SSH key if followed by filename (i.e. personal-github).
 alias shagent="echo -e 'I do not know what this is, but we gotta do it or else the next step will not work... 😕\n\n' && eval '$(ssh-agent -s)'" # Starts SSH agent.
-alias shakey="echo -e 'The name is Bond, James Bond... and I need that key! 🔑\n\n' && ssh-add -K ${HOME}/.ssh/$1" # Adds SSH key to agent. Make sure you add filename created with skgen alias to the end of this alias.
+alias shakey="echo -e 'The name is Bond, James Bond... and I need that key! 🔑\n\n' && ssh-add --apple-use-keychain ${HOME}/.ssh" # TODO: Figure out how to add this alias with variable because the forward slash throws it off.
+# Adds SSH key to agent. Make sure you add filename created with skgen alias to the end of this alias. ** For Windows/WSL you need to remove "UseKeychain from SSH config and -K/--apple-use-keychain from this code."
 alias shatest="echo -e 'Did it work?? ✋\n\n' && ssh -T git@$1" # Test your connection. Make sure you add your Host name created during the config file setup, to the end of this alias.
 
 # GULP ALIASES
@@ -154,6 +155,7 @@ alias gucl="echo -e 'Clean up, clean up, everybody clean up! 🎵\n\n' && gulp c
 alias gcon="echo -e 'Opening your global Git Config file. 🎛️\n\n' && code ${HOME}/.gitconfig" # Opens global gitconfig file in vscode.
 alias gup="git config --global $1" # Update Git Config parameter.
 alias gig="echo -e 'Opening up your global Git Ignore file. 🎛️\n\n' && code ${HOME}/.gitignore_global" # Opens global gitconfig file in vscode.
+alias gl="git log --graph --oneline --decorate" # Provides a graph of the git log.
 alias gs="echo -e 'All right! What is going on here? 😕\n\n' && git status" # Provides git status.
 alias gcb="echo -e 'A new branch is sprouting on your Git tree 🌳\n\n' && git checkout -b $1" # Switch to and create branch. Append branch name to the end of this alias.
 alias gsb="echo -e 'Let us climb to that branch! 🌴\n\n' && git checkout $1" # Switched to branch specified after this alias.
