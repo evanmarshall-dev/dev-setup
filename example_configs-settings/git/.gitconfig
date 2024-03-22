@@ -1,8 +1,8 @@
 # .gitconfig
 [core]
-	# excludesfile = /Users/evanmarshall/.gitignore_global # This is used for MacOS.
-	excludesfile = /home/gingaranga/.gitignore_global # This is used for Windows WSL.
-	autocrlf = false # For windows to work with Uniz systems.
+	excludesfile = /Users/evan.marshall/.gitignore_global
+	# excludesfile = /home/gingaranga/.gitignore_global # This is used for Windows WSL.
+	autocrlf = false # For windows to work with Unix systems.
 	editor = code --wait
 [init]
 	defaultBranch = main
@@ -13,8 +13,8 @@
 	verbose = true
 [diff]
 	algorithm = histogram
-[url "git@dgit.com:"]
-	insteadOf = "https://github.com/" # If you need to unlock your SSH key because of this then change insteadOf to pushInsteadOf.
+# [url "git@dgit.com:"]
+# 	insteadOf = "https://github.com/" # If you need to unlock your SSH key because of this then change insteadOf to pushInsteadOf.
 [credential]
 	helper = osxkeychain # Use Mac keychain for managing credentials.
 [gpg]

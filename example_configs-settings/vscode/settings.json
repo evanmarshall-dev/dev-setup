@@ -43,7 +43,7 @@
     }
   ],
   // TERMINAL
-  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontFamily": "FiraMono Nerd Font",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.profiles.linux": {
