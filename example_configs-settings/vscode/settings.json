@@ -110,15 +110,6 @@
   "scss.hover.documentation": false,
   "html.hover.documentation": false,
   "npm.scriptHover": false,
-  // AI - COPILOT & CODY
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
-  "cody.autocomplete.advanced.provider": "unstable-openai",
-  "cody.autocomplete.formatOnAccept": true,
   // SPELL CHECKER IGNORED WORDS
   "cSpell.userWords": [
     "BEDMAS",
