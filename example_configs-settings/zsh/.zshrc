@@ -245,6 +245,14 @@ gitNew() {
   fi
 } # Connect a local project to an empty remote git repo, add template README file, stage README, commit README, and then push README to the remote repo or origin.
 
+# GITHUB CLI ALIASES
+# ----------------------------------------------
+alias ghlogin="gh auth login" # Login and authenticate your GitHub account locally.
+alias ghlist="gh extension list" # List all GitHub CLI extensions.
+alias ghci="gh extension install github/gh-copilot" # Install GitHub CLI extension: GitHub Copilot.
+alias ghcs="gh copilot suggest '$1'" # Suggests a command. Make sure you append what you want a suggestion for to this alias.
+alias ghce="gh copilot explain '$1'" # Explains a command. Make sure you append what you want an explanation for to this alias.
+
 # NEXTJS ALIASES
 # ----------------------------------------------
 alias nxi="npx create-next-app@latest" # Launch the config setup for a NextJS app.
@@ -300,6 +308,12 @@ huskySet() {
 
 # TODO: Modify the following code to add lint-staged to the husky pre-commit. Then add to above alias function.
 ## echo "# New Repo" >> README.md
+
+# FFMPEG ALIASES
+# ----------------------------------------------
+alias ffc="ffmpeg -i $1 $2" # Replace $1 and $2 with input file and output file, respectively to convert $1 into $2.
+alias ffs="ffmpeg -i $1.srt big.ass"
+alias ffsub="ffmpeg -i $1 -vf ass=big.ass $2" # Takes the above created ass file and adds it as a subtitle to video file $1. The output is the $2 argument.
 
 # NEEDED FOR NVM
 # ----------------------------------------------
